@@ -1,0 +1,15 @@
+#Ignore virtual environment
+myvenv/
+
+#Bytecode files
+__pycache__/
+*.pyc
+
+#SQLite DB file
+db.sqlite3
+
+#Environment variables file
+.env
+
+# VScode settings 
+.vscode/

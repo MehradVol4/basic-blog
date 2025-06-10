@@ -1,0 +1,16 @@
+{% extends "blog_app/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<section class="content-section p-4 bg-secondary rounded shadow-sm">
+  <h1 class="text-light mb-4">Edit or Create New Post</h1>
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary mt-3">Post</button>
+  </form>
+</section>
+
+{% endblock content %}

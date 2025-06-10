@@ -1,0 +1,16 @@
+{% extends "blog_app/base.html" %}
+
+{% block content %}
+
+<section class="content-section p-4 bg-secondary rounded shadow-sm">
+  <h1 class="text-light mb-4">Delete Post</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    <h2 class="text-light mb-3">Are you sure you want to delete this post? <strong>{{ object.title }}</strong></h2>
+    <button type="submit" class="btn btn-danger mr-3">Delete</button>
+    <a href="{% url 'post-detail' object.id %}" class="btn btn-outline-light">Cancel</a>
+  </form>
+</section>
+
+{% endblock content %}
